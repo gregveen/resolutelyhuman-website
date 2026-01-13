@@ -4,13 +4,28 @@
   <meta charset="UTF-8" />
   <title>Resolutely Human</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
   <style>
     * { box-sizing: border-box; }
+    :root {
+      --bg: #ffffff;
+      --text: #1f1f1f;
+      --link: #1f1f1f;
+      --link-hover: #333333;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f0f0f;
+        --text: #dddddd;
+        --link: #dddddd;
+        --link-hover: #c9c9c9;
+      }
+    }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: ##FFFFFF;
-      color: #dddddd;
+      background: var(--bg);
+      color: var(--text);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,10 +40,10 @@
       font-size: 5rem;
     }
     a, a:visited {
-      color: #ddd;
+      color: var(--link);
     }
     a:hover {
-      color: #ccc;
+      color: var(--link-hover);
     }
   </style>
 </head>
